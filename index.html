@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario: Liderazgo Operativo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <div id="start-screen" class="screen active">
+            <h1>Cuestionario de Liderazgo Operativo</h1>
+            <p>Pon a prueba tus conocimientos. Tienes 40 segundos por pregunta.</p>
+            <div class="input-group">
+                <label for="username">Nombre del Participante:</label>
+                <input type="text" id="username" placeholder="Ingresa tu nombre..." required>
+            </div>
+            <button id="start-btn">Comenzar Cuestionario</button>
+        </div>
+
+        <div id="quiz-screen" class="screen">
+            <div class="quiz-header">
+                <span id="question-counter">Pregunta 1 de 10</span>
+                <span id="timer-display">Tiempo: 40s</span>
+            </div>
+            <h2 id="question-text">¿Pregunta?</h2>
+            <div id="options-container" class="options-grid">
+                </div>
+            <div id="feedback-message" class="feedback hidden"></div>
+        </div>
+
+        <div id="result-screen" class="screen">
+            <h2>¡Cuestionario Finalizado!</h2>
+            <p id="final-score-text"></p>
+            <button id="download-pdf-btn">Descargar Reporte PDF</button>
+            <button id="restart-btn" class="btn-secondary">Volver a Intentar</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
